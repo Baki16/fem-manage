@@ -1,0 +1,359 @@
+/* ==== Custom properties */
+:root {
+  /* ---- Colors ---- */
+
+  /* -- Prymary -- */
+  --clr-bright-red: 12, 88%, 59%;
+  --clr-dark-blue: 228, 39%, 23%;
+
+  /* -- Neutral */
+  --clr-dark-gray-blue: 227, 12%, 61%;
+  --clr-darker-blue: 233, 12%, 13%;
+  --clr-pale-red: 13, 100%, 96%;
+  --clr-light-gray: 0, 0%, 98%;
+
+  /* ---- Fonts ---- */
+  --ff-serif: "Be Vietnam Pro", sans-serif;
+
+  /* ---- Font size ---- */
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+}
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+  }
+}
+/* ==== Reset style ==== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+/* ==== Utility classes ==== */
+/* ---- Positioning and layout ---- */
+.container {
+  padding: 3.5em 2em;
+  margin-inline: auto;
+  max-width: 70em;
+}
+.grid-container {
+  max-width: 70em;
+  margin-inline: auto;
+  display: grid;
+}
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+/* ---- Text ---- */
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-900 {
+  font-size: var(--fs-200);
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+/* ---- Colors ---- */
+.bg-red {
+  background-color: hsl(var(--clr-bright-red));
+}
+.bg-darker-blue {
+  background-color: hsl(var(--clr-darker-blue));
+}
+.text-dark {
+  color: hsl(var(--clr-dark-blue));
+}
+.text-gray {
+  color: hsl(var(--clr-dark-gray-blue));
+}
+.text-white {
+  color: hsl(0, 100%, 100%);
+}
+/* ---- Aditional classes ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+/* ---- Seting ip body ---- */
+body {
+  font-size: 16px;
+  font-family: var(--ff-serif);
+  color: hsl(var(--clr-dark-gray-blue));
+}
+/* ==== Homepage ==== */
+.overlay{
+    position: absolute;
+    inset: 0 0 0 0;
+    background: linear-gradient(rgba(0,0,0, 0), rgba(0,0,0, .8));
+    transform: translateY(1000%);
+    transition: transform 500ms ease-in-out;
+}
+.ovarlay,.active{
+    transform: translateY(0);
+}
+/* ---- Header ---- */
+.home > header {
+  justify-content: space-around;
+  align-items: center;
+}
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 2rem;
+  }
+.primary-navigation a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.mobile-nav-toggle {
+    display: none;
+  }
+  @media (max-width: 35rem) {
+    .home > header{
+        justify-content: space-between;
+    }
+    .primary-navigation {
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 15vh 3rem 50vh 3rem;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateY(-1000%);
+        transition: transform 500ms ease-in-out;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+    
+    .primary-navigation[data-visible="true"] {
+        transform: translateY(0);
+    }
+    .primary-navigation a{
+        color: hsl(var(--clr-dark-blue));
+        font-weight: 700;
+
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 2rem;
+        top: 3.5rem;
+        background: transparent;
+        background-image: url('./images/icon-hamburger.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url('./images/icon-close.svg');
+    }
+    
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+    .call-to-action{
+        display: none;
+    }
+    
+  }
+.home > header > .call-to-action {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 7px 13px -4px hsl(var(--clr-bright-red));
+  -moz-box-shadow: 0px 7px 13px -4px hsl(var(--clr-bright-red));
+  box-shadow: 0px 7px 13px -4px hsl(var(--clr-bright-red));
+}
