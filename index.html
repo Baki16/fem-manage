@@ -27,29 +27,59 @@
   <body class="home">
     <div class="overlay"></div>
     <header class="container flex">
-      <div class="logo">
+      <a class="logo" href="index.html">
         <img src="./images/logo.svg" alt="logo" />
-      </div>
+      </a>
+
       <button class="mobile-nav-toggle" aria-controls="primary-navigation">
         <span class="sr-only" aria-expanded="false">Menu</span>
       </button>
       <nav>
-        <ul id="primary-navigation" data-visible="false"  class="primary-navigation flex">
-          <li><a class="text-gray fw-500" href="#">Pricing</a></li>
-          <li><a class="text-gray fw-500" href="#">Product</a></li>
-          <li><a class="text-gray fw-500" href="#">About Us</a></li>
-          <li><a class="text-gray fw-500" href="#">Careers</a></li>
-          <li><a class="text-gray fw-500" href="#">Community</a></li>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li><a class="text-dark fw-500" href="#">Pricing</a></li>
+          <li><a class="text-dark fw-500" href="#">Product</a></li>
+          <li><a class="text-dark fw-500" href="#">About Us</a></li>
+          <li><a class="text-dark fw-500" href="#">Careers</a></li>
+          <li><a class="text-dark fw-500" href="#">Community</a></li>
         </ul>
       </nav>
-      <button class="call-to-action bg-red text-white fw-700 ff-serif">Get Started</button>
+      <button class="call-to-action bg-red text-white fw-700 ff-serif">
+        Get Started
+      </button>
     </header>
+    <main class="grid-container">
+        <section class="hiro flex">
+          <article class="main-info flex">
+            <h1 class="fs-600 fw-700 text-dark">
+              Bring everyone together to build better products.
+            </h1>
+            <p>
+              Manage makes it simple for software teams to plan day-to-day tasks
+              while keeping the larger team goals in view.
+            </p>
+            <div>
+              <button class="call-to-action-hero bg-red text-white fw-700 ff-serif">
+                Get Started
+              </button>
+            </div>
+          </article>
+          <div class="img">
+            <img
+              src="./images/illustration-intro.svg"
+              alt="intro illustation"
+            />
+          </div>
+        </section>
+    </main>
 
     <!-- 
-  Bring everyone together to build better products.
+  
 
-  Manage makes it simple for software teams to plan day-to-day 
-  tasks while keeping the larger team goals in view.
+ 
 
   Get Started
 
